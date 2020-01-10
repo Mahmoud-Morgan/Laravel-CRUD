@@ -19,3 +19,6 @@ Route::get('/', function () {
 // Route::post('/user/login','APIloginController@login');
 Route::resource('products', 'ProductController'); 
 Route::get('/index', 'ProductController@index'); 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
