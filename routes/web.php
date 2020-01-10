@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::post('/user/register','APIRegisterController@register');
+// Route::post('/user/login','APIloginController@login');
+Route::resource('products', 'ProductController'); 
