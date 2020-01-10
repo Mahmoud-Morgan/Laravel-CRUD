@@ -1,4 +1,4 @@
-@extends('product.layout')
+@extends('product.Layout')
    
 @section('content')
   <a href="{{ route('products.create') }}" class="btn btn-success mb-2">Add</a> 

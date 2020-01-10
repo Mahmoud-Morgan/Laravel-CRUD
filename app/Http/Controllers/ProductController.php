@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Product;
+
 class ProductController extends Controller
 {
     /**
@@ -16,7 +18,7 @@ class ProductController extends Controller
         //
         $data['products'] = Product::orderBy('id','desc')->paginate(10);
    
-        return view('product.list',$data);
+        return view('product.List',$data);
     }
 
     /**
@@ -27,7 +29,7 @@ class ProductController extends Controller
     public function create()
     {
         //
-        return view('product.create');
+        return view('product.Create');
     }
 
     /**
@@ -74,7 +76,7 @@ class ProductController extends Controller
         $where = array('id' => $id);
         $data['product_info'] = Product::where($where)->first();
  
-        return view('product.edit', $data);
+        return view('product.Edit', $data);
     }
 
     /**

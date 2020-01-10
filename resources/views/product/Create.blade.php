@@ -1,4 +1,4 @@
-@extends('product.layout')
+@extends('product.Layout')
  
 @section('content')
 <h2 style="margin-top: 12px;" class="text-center">Add Product</a></h2>
