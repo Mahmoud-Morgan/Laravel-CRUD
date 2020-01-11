@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Product;
+use Illuminate\Routing\Redirector;
+use Redirect;
 
 class ProductController extends Controller
 {
