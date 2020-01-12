@@ -12,7 +12,7 @@
     background-color: #e3f6f5;
     }
     .container{
-    background: #bae8e8;
+    background: #6ba8a9;
     padding: 4%;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
