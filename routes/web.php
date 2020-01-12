@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::post('/user/register','APIRegisterController@register');
 // Route::post('/user/login','APIloginController@login');
 Route::resource('products', 'ProductController'); 
-Route::get('/index', 'ProductController@index'); 
+Route::get('/', 'ProductController@index'); 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
