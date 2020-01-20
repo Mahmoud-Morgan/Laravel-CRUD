@@ -33,5 +33,7 @@
         <server name="MAIL_DRIVER" value="array"/>
         <server name="QUEUE_CONNECTION" value="sync"/>
         <server name="SESSION_DRIVER" value="array"/>
+        <server name="DB_CONNECTION" value="msql"/>
+        <server name="DB_DATABASE" value="heroku_1c7c4b9a0f2fa19"/>
     </php>
 </phpunit>
