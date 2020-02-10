@@ -29,3 +29,4 @@ Route::group([
     Route::post('me', 'AuthController@me');
 
 });
+Route::resource('/', 'ProductController'); 
