@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Product;
 
+use App\Http\Resources\ProductResource;
+
+use App\Http\Resources\ProductResourceCollection;
+
+
 class ApiProductController extends Controller
 {
     /**
@@ -13,10 +18,10 @@ class ApiProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index():ProductResourceCollection
     {
         //
-        return ('api controller');
+        return new ProductResourceCollection(Product::paginate());
     }
 
     /**
@@ -46,10 +51,10 @@ class ApiProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(Product $product): ProductResource
     {
         //
-        return $product;
+        return new ProductResource ($product);
     }
 
     /**
