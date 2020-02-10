@@ -15,9 +15,13 @@ use Illuminate\Http\Request;
 
 
  
- //Route::apiResource('products', 'ApiProductController '); 
- Route::get('/', 'ApiProductController@index'); 
+ 
+ //Route::get('/', 'ApiProductController@index'); 
  Route::apiResource('products', 'ApiProductController'); 
+//  use App\Product;
+//  Route::get('products/{product}',function(Product $product){
+//      return $product;
+//  });
 
 // Route::group([
 
