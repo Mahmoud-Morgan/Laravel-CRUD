@@ -21,10 +21,10 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
-
+  
     public function testBasicTest3()
     {
-        $response = $this->get('/api/products');
+        $response = $this->post('/api/products/31');
 
         $response->assertStatus(200);
     }

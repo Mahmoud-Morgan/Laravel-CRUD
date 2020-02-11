@@ -43,6 +43,16 @@ class ApiProductController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+
+            'title'        => 'required',
+            'product_code' => 'required',
+            'description'  => 'required',
+        ]);
+
+        $product = Product::create($request->all());
+
+        return new ProductResource($product);
     }
 
     /**
@@ -75,9 +85,19 @@ class ApiProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,Product $product):ProductResource
     {
         //
+        // $request->validate([
+
+        //     'title'        => 'required',
+        //     'product_code' => 'required',
+        //     'description'  => 'required',
+        // ]);
+
+        $product ->update($request->all());
+
+        return new ProductResource($product);
     }
 
     /**
@@ -86,8 +106,12 @@ class ApiProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
         //
+        $product->delete();
+
+        return response()->json();
+
     }
 }
