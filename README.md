@@ -7,3 +7,6 @@ using phpunite test
 
 ### Deployed 
 Deployed on Heroku as a free hosting :https://laravel-crud.herokuapp.com/
+
+#### Restful API 
+ using apiResourse : https://laravel-crud.herokuapp.com/api/prducts/
