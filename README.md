@@ -6,7 +6,7 @@ using Laravel framework with mysql Database.
 using phpunite test
 
 ### Deployed 
-Deployed on Heroku as a free hosting :https://laravel-crud.herokuapp.com/
+Deployed on Heroku as a free hosting : https://laravel-crud.herokuapp.com/
 
 #### Restful API 
  using apiResource : https://laravel-crud.herokuapp.com/api/prducts/
